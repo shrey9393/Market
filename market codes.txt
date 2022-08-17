@@ -1,0 +1,56 @@
+ 
+
+create database market;
+use market;
+
+create table firm
+(
+firm_id int primary key,
+firm_name varchar(40),
+owners_name varchar(30) not null,
+owners_mob_num varchar(15) not null,
+owners_tel_num varchar(15),
+email_id varchar(60),
+address varchar(100) unique,
+r_u_owner varchar(2),
+sp_owners_name varchar(40),
+sp_owners_mob_num varchar(13),
+pass varchar(40)
+);
+desc firm;
+insert into firm values("11111","nandini mobiles","sunil agrawal","9427224107","9033351455","anshulagrawa107@gmail.com","75 abhishek mkt ringroad surat","y","sunil agrawal","9427224107","usha");
+insert into firm values("11112","shrey mobs","shrey","9081315347","123455684","shreyagrawal93@gmail.com","703 p aappt","y","shrey","9081315347","shreyan");
+
+
+create table items
+(
+item_code int(4) primary key,
+brand varchar(50),
+serise varchar(30),
+rate integer(10),
+quantity integer(10)
+);
+insert into items values('1',"Samsung","J6 infinity","14999","91");
+insert into items values('2',"Vivo","V5","18000","40");
+insert into items values('3',"Oppo","A1k","4999","80");
+insert into items values('4',"Mi","NOTE 6","20999","47");
+insert into items values('5',"Samsung","J6 +","17999","55");
+insert into items values('6',"One plus","6T","32000","71");
+insert into items values('7',"Apple","Xs Max","142000","21");
+insert into items values('8',"Samsung","Galaxy Fold","100000","29");
+insert into items values('9',"Apple","6s","32000","5");
+
+
+
+create table bill
+(
+bill_no int(5),
+DateOrder DATE,
+CustomerName varchar(90),
+mobile_no char(12),
+mobilebrand varchar(90),
+model varchar(30),
+quantity int(3),
+total_amt decimal(9,2)
+);
+
